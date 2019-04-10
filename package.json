@@ -1,0 +1,14 @@
+{
+  "name": "@notainc/delay",
+  "version": "0.0.1",
+  "description": "delay for async-await",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "delay"
+  ],
+  "author": "Sho Hashimoto <hashimoto@shokai.org>",
+  "license": "MIT"
+}
