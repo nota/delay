@@ -13,7 +13,5 @@ jobs:
     - deploy:
         name: 'npm publish'
         command: |
-          if [[ $CIRCLE_TAG =~ v\d+\.\d+\.\d ]]; then
-            echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/repo/.npmrc
-            npm publish
-          fi
+          echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/repo/.npmrc
+          npm publish
