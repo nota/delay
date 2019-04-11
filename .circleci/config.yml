@@ -3,10 +3,17 @@ jobs:
   build:
     docker:
       - image: circleci/node:10.15.3
-    working_directory: ~/app
+    working_directory: ~/repo
     steps:
-      - run: 'node -v'
-      - run: 'npm -v'
-      - checkout
-      - run: 'npm ci'
-      - run: 'npm test'
+    - run: 'node -v'
+    - run: 'npm -v'
+    - checkout
+    - run: 'npm ci'
+    - run: 'npm test'
+    - deploy:
+        name: 'npm publish'
+        command: |
+          if [[ $CIRCLE_TAG =~ v\d+\.\d+\.\d ]]; then
+            echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/repo/.npmrc
+            npm publish
+          fi
