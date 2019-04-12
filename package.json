@@ -2,8 +2,10 @@
   "name": "@notainc/delay",
   "version": "0.0.1",
   "description": "delay for async-await",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
+    "build": "babel src/ --out-dir lib/",
+    "pretest": "npm run build",
     "test": "standard"
   },
   "keywords": [
@@ -12,6 +14,14 @@
   "author": "Sho Hashimoto <hashimoto@shokai.org>",
   "license": "MIT",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-es2017": "^6.24.1",
     "standard": "^12.0.1"
+  },
+  "standard": {
+    "ignore": [
+      "/lib"
+    ]
   }
 }
