@@ -6,7 +6,8 @@
   "scripts": {
     "build": "babel src/ --out-dir lib/",
     "pretest": "npm run build",
-    "test": "standard"
+    "test": "standard",
+    "prepublishOnly": "npm test"
   },
   "keywords": [
     "delay"
