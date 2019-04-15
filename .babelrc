@@ -1,3 +1,14 @@
 {
-  "presets": [ "es2015", "es2017" ]
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "chrome": "40",
+          "safari": "8",
+          "firefox": "40"
+        }
+      }
+    ]
+  ]
 }
