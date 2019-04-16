@@ -1,3 +1,6 @@
 test/
 src/
+sample/
 package-lock.json
+.babelrc
+.circleci/
