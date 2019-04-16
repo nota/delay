@@ -4,7 +4,9 @@
   "description": "delay for async-await",
   "main": "lib/index.js",
   "scripts": {
-    "build": "babel src/ --out-dir lib/",
+    "build": "run-s build:*",
+    "build:clean": "rm -rf lib/",
+    "build:babel": "babel src/ --out-dir lib/",
     "pretest": "npm run build",
     "test": "run-s test:*",
     "test:standard": "standard",
