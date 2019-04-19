@@ -1,6 +1,6 @@
 {
   "name": "@notainc/delay",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "delay for async-await",
   "main": "lib/index.js",
   "scripts": {
