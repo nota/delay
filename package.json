@@ -11,7 +11,8 @@
     "test": "run-s test:*",
     "test:standard": "standard",
     "test:mocha": "NODE_ENV=test mocha 'test/*.js' -r @babel/register -r @babel/polyfill --timeout 10000 --exit",
-    "prepublishOnly": "npm test"
+    "prepublishOnly": "npm test",
+    "postpublish": "git push origin --tags && git push origin master"
   },
   "keywords": [
     "delay"
